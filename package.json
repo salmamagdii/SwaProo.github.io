@@ -1,8 +1,11 @@
 {
+  "homepage": "https://github.com/salmamagdii/SwaProo.github.io.git",
   "name": "tailadmin-dashboard",
   "version": "1.0.0",
   "description": "TailAdmin Dashboard Template",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "tailwindcss -i ./src/css/style.css -o ./dist/css/style.css --minify && cp -r src/* dist/",
     "dev": "tailwindcss -i ./src/css/style.css -o ./dist/css/style.css --watch"
   },
@@ -11,6 +14,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.21"
   }
 }
